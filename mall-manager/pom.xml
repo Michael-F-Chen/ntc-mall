@@ -17,7 +17,7 @@
 		<module>mall-manager-interface</module>
 	</modules>
 	<dependencies>
-		<!-- 依赖mall-manager-pojo -->
+		<!-- 依赖mall-manager-common -->
 		<dependency>
 			<groupId>com.ntc</groupId>
 			<artifactId>mall-common</artifactId>

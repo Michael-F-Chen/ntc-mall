@@ -23,7 +23,7 @@
 	<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/> -->
 	
 	<!-- 引用dubbo服务 -->
-	<dubbo:application name="mall-manager-web"/>
+	<dubbo:application name="mall-portal-web"/>
 	<dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>	
 	<!-- <dubbo:reference interface="com.ntc.mall.service.TestService" id="testService" /> -->	
 </beans>
