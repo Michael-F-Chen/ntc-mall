@@ -129,6 +129,11 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.ntc.mall.pojo.TbContent" >
+ 	<!-- 主键返回，主键自增时才可使用，keyProperty返回到对象的哪个属性，order返回时机（插入前/后） -->
+  <selectKey keyProperty="id" order="AFTER" resultType="long">
+  	select LAST_INSERT_ID()
+  </selectKey>
+    
     insert into tb_content (id, category_id, title, 
       sub_title, title_desc, url, 
       pic, pic2, created, 

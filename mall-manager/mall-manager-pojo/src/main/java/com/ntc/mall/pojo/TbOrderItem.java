@@ -1,7 +1,11 @@
 package com.ntc.mall.pojo;
 
-public class TbOrderItem {
-    private String id;
+import java.io.Serializable;
+
+public class TbOrderItem implements Serializable{
+    private static final long serialVersionUID = 7722899031437372362L;
+
+	private String id;
 
     private String itemId;
 

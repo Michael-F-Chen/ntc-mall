@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ntc.mall.common.pojo.EasyUITreeNode;
+import com.ntc.mall.common.pojo.MallResult;
 import com.ntc.mall.content.service.ContentCategoryService;
 
 /**
@@ -35,5 +36,29 @@ public class ContentCategoryController {
 	public List<EasyUITreeNode> getContentCategoryList(@RequestParam(value="id",defaultValue="0") Long parentId){
 		// 需要的参数时id,第一次不会传递id,需要设置默认参数,0代表顶层节点
 		return contentCategoryService.getContentCategoruList(parentId);
+	}
+	
+	/**
+	 * 添加节点
+	 * @param parentId
+	 * @param name
+	 * @return
+	 */
+	@RequestMapping(value="/content/category/create", method=RequestMethod.POST)
+	@ResponseBody
+	public MallResult createContentCategory(Long parentId, String name){
+		return contentCategoryService.createContentCategory(parentId, name);
+	}
+	
+	/**
+	 * 添加节点
+	 * @param parentId
+	 * @param name
+	 * @return
+	 */
+	@RequestMapping(value="/content/category/delete", method=RequestMethod.POST)
+	@ResponseBody
+	public MallResult deleteContentCategory(Long id){
+		return contentCategoryService.deleteContentCategory(id);
 	}
 }

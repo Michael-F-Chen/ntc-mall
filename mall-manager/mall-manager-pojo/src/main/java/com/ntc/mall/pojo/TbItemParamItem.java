@@ -1,9 +1,12 @@
 package com.ntc.mall.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbItemParamItem {
-    private Long id;
+public class TbItemParamItem  implements Serializable{
+    private static final long serialVersionUID = 9141776351442226308L;
+
+	private Long id;
 
     private Long itemId;
 

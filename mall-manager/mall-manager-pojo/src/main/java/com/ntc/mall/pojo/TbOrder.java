@@ -1,9 +1,12 @@
 package com.ntc.mall.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbOrder {
-    private String orderId;
+public class TbOrder implements Serializable{
+    private static final long serialVersionUID = -6495058571013038820L;
+
+	private String orderId;
 
     private String payment;
 
