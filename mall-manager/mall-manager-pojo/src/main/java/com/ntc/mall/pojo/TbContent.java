@@ -1,9 +1,12 @@
 package com.ntc.mall.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbContent {
-    private Long id;
+public class TbContent implements Serializable{
+    private static final long serialVersionUID = -3823332777558787933L;
+
+	private Long id;
 
     private Long categoryId;
 

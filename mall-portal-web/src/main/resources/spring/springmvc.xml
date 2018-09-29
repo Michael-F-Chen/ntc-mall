@@ -9,6 +9,7 @@
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
+	<context:property-placeholder location="classpath:resource/*.properties"/>
 	<context:component-scan base-package="com.ntc.mall.portal.controller" />
 	<mvc:annotation-driven />
 	<bean
@@ -25,5 +26,5 @@
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="mall-portal-web"/>
 	<dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>	
-	<!-- <dubbo:reference interface="com.ntc.mall.service.TestService" id="testService" /> -->	
+	<dubbo:reference interface="com.ntc.mall.content.service.ContentService" id="contentService" />	
 </beans>

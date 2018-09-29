@@ -51,7 +51,7 @@ public class ContentCategoryController {
 	}
 	
 	/**
-	 * 添加节点
+	 * 删除节点
 	 * @param parentId
 	 * @param name
 	 * @return
