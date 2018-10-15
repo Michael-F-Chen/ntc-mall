@@ -5,8 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.taotao.common.pojo.TaotaoResult;
-import com.taotao.search.service.SearchService;
+import com.ntc.mall.common.pojo.MallResult;
+import com.ntc.mall.search.service.SearchService;
 
 @Controller
 public class ImportAllItems {
