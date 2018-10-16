@@ -8,6 +8,7 @@ import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.HttpSolrServer;
 import org.apache.solr.common.SolrInputDocument;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ntc.mall.common.pojo.MallResult;
 import com.ntc.mall.common.pojo.SearchItem;
@@ -17,6 +18,7 @@ import com.ntc.mall.search.service.SearchService;
 /**
  * @author Michael-Chen
  */
+@Service
 public class SearchServiceImpl implements SearchService {
 
 	@Autowired
@@ -42,7 +44,7 @@ public class SearchServiceImpl implements SearchService {
 			document.setField("item_price", searchItem.getPrice());
 			document.setField("item_image", searchItem.getImage());
 			document.setField("item_category_name", searchItem.getCategory_name());
-			document.setField("ite,_desc", searchItem.getItem_desc());
+			document.setField("item_desc", searchItem.getItem_desc());
 			
 			// 添加都索引库
 			solrServer.add(document);
