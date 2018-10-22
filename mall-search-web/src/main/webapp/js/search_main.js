@@ -1282,7 +1282,6 @@ SEARCH.bottom_page_html = function(e, k, j) {
     $("#pagin-btm").html(f)
 };
 SEARCH.page = function(b, a) {
-	alert(1);
     b = parseInt(b, 10);
     if (b < 1) {
         b = 1

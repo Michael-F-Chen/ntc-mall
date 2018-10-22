@@ -30,7 +30,7 @@ public class SearchController {
 	 * @throws Exception 
 	 */
 	@RequestMapping("/search")
-	public String search(Integer page, @RequestParam(value = "q") String queryString, Model model) throws Exception {
+	public String search(@RequestParam(defaultValue="1") Integer page, @RequestParam(value = "q") String queryString, Model model) throws Exception {
 			
 		// 处理乱码
 		queryString = new String(queryString.getBytes("iso-8859-1"),"Utf-8");
